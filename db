@@ -1,0 +1,7 @@
+password kFt9mdtbuQ2cK5TR
+
+
+uri   mongodb+srv://<username>:<password>@cluster.ymn7ugq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster
+
+
+mongodb+srv://<username>:<password>@cluster.ymn7ugq.mongodb.net/
