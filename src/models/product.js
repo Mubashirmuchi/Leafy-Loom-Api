@@ -2,15 +2,10 @@ import mongoose from "mongoose";
 
 const productschema = new mongoose.Schema(
     {
-        originalname: {
+        name: {
             type: String,
-            // required: true,
         },
-        image: {
-            data: Buffer,
-            contentType: String,
-        },
-        userId: {
+        originalname: {
             type: String,
             // required: true,
         },
@@ -19,6 +14,9 @@ const productschema = new mongoose.Schema(
             max: 500,
         },
         url: {
+            type: String,
+        },
+        category: {
             type: String,
         },
     },
