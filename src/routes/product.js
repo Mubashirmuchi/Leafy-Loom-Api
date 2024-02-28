@@ -29,9 +29,20 @@ productrouter.post("/", upload.single("testimage"), async (req, res) => {
 productrouter.get("/allplants", async (req, res) => {
     try {
         const allplants = await Product.find({});
-        res.status(200).json({ success: true, data: allplants });
+        res.status(200).json(allplants);
     } catch (error) {
         console.log(error);
+    }
+});
+
+productrouter.delete("/:id", async (req, res) => {
+    try {
+        console.log(req.params);
+        const item = await Product.findById(req.params.id);
+        await item.deleteOne();
+        res.status(200).json({ message: "The item has been deleted" });
+    } catch (error) {
+        res.status(500).json(error);
     }
 });
 
